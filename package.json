@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-adyen-encrypt": "^2.3.1",
+    "node-fetch": "^2.6.1",
+    "readline-sync": "^1.4.10"
+  },
+  "name": "adyen",
+  "version": "1.0.0",
+  "description": "A credit card checker based off adyen.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Adyen",
+    "Encryption",
+    "Checker"
+  ],
+  "author": "Exo",
+  "license": "ISC"
+}
