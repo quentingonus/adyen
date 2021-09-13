@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^0.21.4",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "node-adyen-encrypt": "^2.3.1",
@@ -11,7 +12,7 @@
   "description": "A credit card checker based off adyen.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [
     "Adyen",
