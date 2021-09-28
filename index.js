@@ -9,6 +9,7 @@ const fs = require('fs');
 var qs = require('qs');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom
+const { countryCodeEmoji, emojiCountryCode } = require('country-code-emoji');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -213,7 +214,6 @@ app.post('/stripe', async (req, res) => {
 });
 
 
-
 app.get('/api/:bin', (req, res) => {
   const bin = req.params.bin
   const api = `https://bins.ws/search?bins=${bin}`;
@@ -231,7 +231,8 @@ app.get('/api/:bin', (req, res) => {
           level: binInfo[2],
           brand: binInfo[3],
           bank: binInfo[4],
-          country: binInfo[5]
+          country: binInfo[5],
+          emoji: countryCodeEmoji(binInfo[5])
         }
         res.send(binObject)
       })
